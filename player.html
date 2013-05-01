@@ -1,0 +1,14 @@
+<h2 class="name" ng-click="edit_player_names()">{{ player_names[player_id] || default_player_name }}</h2>
+
+<ol class="controls">
+  <li><button type="button" ng-click="increment_score(1)">+1</button></li>
+  <li><button type="button" ng-click="increment_score(2)">+2</button></li>
+  <li><button type="button" ng-click="increment_score(3)">+3</button></li>
+  <li><button type="button" ng-click="increment_score(4)">+4</button></li>
+  <li class="custom">
+    <input type="number" ng-model="custom_increment">
+    <button type="button" ng-click="increment_score(custom_increment)">+ {{ custom_increment }}</button>
+  </li>
+</ol>
+
+<figure class="{{ extra_css }}">{{ score }}</figure>

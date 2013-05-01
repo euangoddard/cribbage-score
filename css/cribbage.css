@@ -1,0 +1,118 @@
+html {
+    background-color: #1c1e20;
+    color: #fff;
+}
+
+.scores {
+    width: 1170px;
+    overflow: hidden;
+    margin: 0 auto;
+    font-size: 21px;
+}
+
+.player {
+    width: 50%;
+    float: left;
+    position: relative;
+}
+#player2 {
+    text-align: right;
+}
+.player figure {
+    font-size: 10em;
+    text-align: center;
+    margin-bottom: 0.1em;
+}
+
+.controls {
+    position: absolute;
+    top: 4em;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 140%;
+}
+#player2 .controls {
+    left: auto;
+    right: 0;
+}
+input[type="number"] {
+    width: 2.5em;
+    background: transparent;
+    color: #fff;
+    border: 0;
+}
+button {
+    background: transparent;
+    color: #fff;
+    border: 0;
+    border-bottom: 1px solid #3e4041;
+    padding: 0.25em;
+}
+.custom button {
+    border-bottom: 0;
+}
+.won {
+    color: #4f4;
+}
+
+aside input[type="text"],
+aside button {
+    width: 300px;
+    font-size: 3em;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    border-bottom: 1px solid #3e4041;
+    padding: 0.25em;
+    display: block;
+    margin: 0.5em auto;
+}
+aside button {
+    border-bottom: 0;
+}
+aside input[type="text"].ng-invalid {
+    border-bottom-color: #ff4444;
+}
+aside button[disabled] {
+    color: #f44;
+}
+
+@media screen and (min-width: 940px) and (max-width: 1169px) {
+    .scores {
+        width: 940px;
+        font-size: 19px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 939px) {
+    .scores {
+        width: 768px;
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .scores {
+        width: 100%;
+        font-size: 15px;
+    }
+    .player {
+        text-align: center;
+        width: auto;
+        float: none;
+        margin-right: 0.5em;
+    }
+    #player2 {
+        text-align: center;
+    }
+    .controls {
+        top: 2em;
+    }
+    #player2 .controls {
+        left: 0;
+        right: auto;
+    }
+    .player figure {
+        text-align: right;
+    }
+}

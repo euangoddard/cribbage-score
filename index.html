@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cribbage Score</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/cribbage.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body ng-app="CribbageScore">
+    <section class="scores" ng-hide="is_capturing_names">
+      <div
+        class="player"
+        id="player1"
+        ng-controller="Player1Controller"
+        ng-include
+        src="'player.html'"
+      >
+      </div>
+      
+      <div
+        class="player"
+        id="player2"
+        ng-controller="Player2Controller"
+        ng-include
+        src="'player.html'"
+      >
+      </div>
+    </section>
+    
+    <aside style="display: none;" ng-show="is_capturing_names" ng-controller="NamesController">
+      <form ng-submit="finish_editing()" name="name_form">
+        <input type="text" size="30" ng-model="names.1" required placeholder="Player 1">
+        <input type="text" size="30" ng-model="names.2" required placeholder="Player 2">
+        <button
+          type="submit"
+          ng-disabled="name_form.$invalid">Save</button>
+      </form>
+    </aside>
+    
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
